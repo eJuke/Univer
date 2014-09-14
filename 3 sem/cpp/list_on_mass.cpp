@@ -4,34 +4,34 @@
 
 using namespace std;
 
-struct oneway_list {
+struct onewayList {
 	int number;
 	int next;
 };
 
-class new_list {
+class newList {
 private:
-	oneway_list list[100];
+	onewayList list[100];
 public:
 
-	void del_atpos() {
+	void delAtPos() { //удаление элемента
 		cout << "Enter the number of position(0<=pos<100):";
-		int pos = 0, count = 0, check = 0, check_prev = 0;
+		int pos = 0, count = 0, check = 0, checkPrev = 0;
 		cin >> pos;
 		do{
 			check=list[check].next;
 			count++;
-		}while(count<pos);
+		}while(count<pos); //проход до позиции элемента
 		do{
-			check_prev = check;
+			checkPrev = check; 
 			check=list[check].next;
-			list[check_prev].number=list[check].number;
+			list[checkPrev].number=list[check].number;
 			count++;
-		}while(count<99);
+		}while(count<99); //сдвиг списка (при сдвиге искомый элемент удаляется)
 		list[check].number='\0';
 	}
 
-	void list_fill() {
+	void listFill() { //заполнение списка
 		long long x;
 		asm("rdtsc" : "=A"(x));
 		srand(x);
@@ -42,23 +42,22 @@ public:
 		for (int i = 0; i < 100; ++i) mass[i]=false;
 		if(menu)	input.open("random.txt");
 		mass[0] = true;
-		int count = 0, count_last;
+		int count = 0, countLast;
 		for (int i=0; i<99; i++){
 			if(menu) input >> list[count].number;
 			else cin >> list[count].number;
-			count_last = count;
-			while (mass[count])	{count=rand()%100;
-								cout << count << "lalala\n";}
-			list[count_last].next = count;
+			countLast = count; //запись позиции текущего элемента
+			while (mass[count])	count=rand()%100; //выдача случайного, не повторяющегося номера
+			list[countLast].next = count; //запись в структуру позиции следующего элемента
 			mass[count]=true;
 		}
 		if(menu) input >> list[count].number;
 		else cin >> list[count].number;
-		list[count].next = -1;
+		list[count].next = -1; //последний элемент
 
 	}
 
-	void print_list() {
+	void printList() { //вывод списка
 		cout << "POS" << '\t' << '\t' << "NUMBER\n";
 		int check=0, count=0;
 		do{
@@ -72,9 +71,9 @@ public:
 
 
 int main (){
-	new_list test;
-	test.list_fill();
-	test.print_list();
-	test.del_atpos();
-	test.print_list();
+	newList test;
+	test.listFill();
+	test.printList();
+	test.delAtPos();
+	test.printList();
 }
