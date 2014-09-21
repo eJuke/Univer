@@ -18,10 +18,10 @@ public:
 		cout << "Enter the number of position(0<=pos<100):";
 		int pos = 0, count = 0, check = 0, checkPrev = 0;
 		cin >> pos;
-		do{
+		while(count<pos){
 			check=list[check].next;
 			count++;
-		}while(count<pos); //проход до позиции элемента
+		} //проход до позиции элемента
 		do{
 			checkPrev = check; 
 			check=list[check].next;
@@ -29,6 +29,8 @@ public:
 			count++;
 		}while(count<99); //сдвиг списка (при сдвиге искомый элемент удаляется)
 		list[check].number='\0';
+		list[checkPrev].next=-1;
+		list[check].next=-2;
 	}
 
 	void listFill() { //заполнение списка
@@ -61,7 +63,7 @@ public:
 		cout << "POS" << '\t' << '\t' << "NUMBER\n";
 		int check=0, count=0;
 		do{
-			cout << count << '\t' << "|" << '\t' << list[check].number << '\n';
+			cout << count << '\t' << "|" << '\t' << list[check].number << '\t' << list[check].next <<'\n';
 			check = list[check].next;
 			count++;
 		}while(check!=-1);
