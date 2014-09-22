@@ -61,9 +61,11 @@ public:
 
 	void printList() { //вывод списка
 		cout << "POS" << '\t' << '\t' << "NUMBER\n";
-		int check=0, count=0;
+		int check=0, count=0, checkP;
 		do{
-			cout << count << '\t' << "|" << '\t' << list[check].number << '\t' << list[check].next <<'\n';
+			checkP = check;
+			cout << count << '\t' << "|" << '\t' << list[check].number << '\t' << list[checkP].next <<'\n';
+			checkP = check;
 			check = list[check].next;
 			count++;
 		}while(check!=-1);
