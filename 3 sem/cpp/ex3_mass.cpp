@@ -146,7 +146,6 @@ private:
 				length++;
 			}
 		}
-
 		for (int i = 0; i < size; ++i) resultArray[i] = array[i];
 		int mem, helpRMem;
 		for (int count = 0; count < length; ++count){
