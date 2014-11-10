@@ -1,0 +1,26 @@
+body { position: relative; }
+
+.description {
+	width: 50%;
+	position: relative;
+}
+
+.help {
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+#usrForm, #randForm{display: none;}
+
+form {margin-top: 10px;}
+
+p {
+	font-size: 12pt;
+	font-family: sans-serif;
+}
+
+#tree, #forest {
+	border: 1px solid #000;
+	background-repeat: repeat;
+	background-image: url(../img/off.png);
+}
