@@ -1,0 +1,246 @@
+@font-face{
+	font-family: RobotoLight;
+	src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face{
+	font-family: RobotoThin;
+	src: url(../fonts/Roboto-Thin.ttf);
+}
+@font-face{
+	font-family: OpenSansLight;
+	src: url(../fonts/OpenSans-Light.ttf);
+}
+
+body {
+	margin: 0;
+	position: relative;
+	min-width: 580px;
+	min-height: 570px;
+}
+
+.header {
+	position: relative;
+	height: 6%;
+	background: linear-gradient(to bottom, #ff2f63 1%,#ff5d3a 80%,#ff5d3a 100%);
+	z-index: 1000;
+}
+
+img.header-button {
+	width: 80%;
+	display:block;
+	margin: 0 auto;
+	height: 100%;
+	border: none;
+
+}
+
+.header-button {
+	border: 2px solid #fff;
+	border-radius: 6px;
+	position: relative;
+	height: 80%;
+	width: 5%;
+	margin: 0 auto;
+	top: 2px;
+	display: none;
+}
+
+.content{
+	height: 94%;
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.menu {
+	position: relative;
+	height: 100%;
+	border-right: 2px solid #ff993a;
+	background-color: #fffaf7;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 0 20px 0 20px;
+	width: 246px;
+	margin: 0;
+	float: left;
+	font-family: OpenSansLight;
+}
+
+.overflow-menu{
+	position: absolute;
+	width:100%;
+	height:100%;
+	z-index: 900;
+	background-color: #fffaf7;
+}
+
+.overflow-info {
+	float: right;
+	padding-right: 20px;
+	font-family: OpenSansLight;
+	font-size: 12pt;
+}
+
+.menu-text{
+	position: relative;
+	display: block;
+	left: 25%;
+	width: 50%;
+	height: 30%;
+	padding-top: 5%;
+}
+
+.menu-textarea{
+	text-align: center;
+	font-family: RobotoThin;
+	font-size: 44pt;
+	background: -webkit-linear-gradient(#ccc, #222);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+/*	visibility: hidden;*/
+}
+
+.menu-change{
+	height: 50%;
+	width: 100%;
+	position: relative;
+}
+
+.menu-change-btn{
+	width: 300px;
+	height: 100px;
+	margin: 10px auto 0 auto;
+	border: 1px solid #f00;
+	border-radius: 10px;
+	position:relative;
+	background-color: #ff6641;
+	-webkit-transition: 1s ease-in-out 0s top;
+}
+
+.menu-change-btn-text {
+	color: #fff;
+	text-align: center;
+	font: 22px	 RobotoThin;
+
+}
+
+.menu-change-btn img{
+	height: 100%;
+}
+
+.display {
+	position: relative;
+	overflow: auto;
+	float: left;
+	display: block;
+	overflow: auto;
+}
+
+.menu-addValue {
+	border-bottom: 1px solid #ff993a;
+}
+
+.divInp {
+	height: 22px;
+	width: 50%;
+	float: left;
+}
+
+.divInp p {
+	display: block;
+	width: 50%;
+	margin: 0;
+	float: right;
+	text-align: right;
+	margin-right: ;
+}
+
+.inputForm {
+	border: 1px solid #ff993a;
+	border-radius: 3px;
+	width: 50%;
+	float: right;
+}
+
+.inputBtn {
+	border: 1px solid #ff993a;
+	border-radius: 3px;
+	background-color: #fff;
+	width: 80%;
+	float: right;
+	outline: none;
+}
+
+.inputBtn:hover {background-color: #fdd;}
+
+.topFormDiv, .bottomFormDiv {
+	padding: 10px 0 0 0;
+	height: 22px;
+}
+
+.menu-value {
+	border: 1px solid #ff993a;
+	border-right: none;
+	width: 24%;
+	float: left;
+	height: 22px;
+	overflow: hidden;
+}
+
+.menu-value p {
+	float: left;
+	margin: 0 1px 0 2px;
+	font-size: 10pt;
+}
+
+.menu-value-text {
+	font-weight: bold;
+	color: #000;
+}
+
+.menu-value-del {
+	border: 1px solid #ff993a;
+	width: 25%;
+	height: 22px;
+	float:left;
+}
+
+.menu-value-del:hover {background-color: #fdd;}
+
+.menu-value-del img {
+	margin: 3px 0 0 11px;
+	height: 16px;
+	width: 40px;
+}
+
+.menu-value-div {
+	margin: 20px 0 20px 0;
+	height: 24px;
+}
+
+.menu-showValues {
+	overflow-y: auto;
+}
+
+.display p {
+	font: 14px monospace;
+}
+
+.display p span {
+	font-weight: bold;
+	color: #f00;
+}
+
+h3 {
+	color: #333;
+	font-family: RobotoThin;
+}
+
+p.textM {
+	font-size: 8pt;
+	width: 100%;
+}
+
+#conform{
+	text-align: center;
+}

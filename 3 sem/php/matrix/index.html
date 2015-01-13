@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>ex1-kurs</title>
+	<link rel="stylesheet" media="all" href="css/style.css">
+	<link rel="stylesheet" media="all" href="css/animate.css">
+	<meta charset="windows-1251">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/matrix.js"></script>
+</head>
+<body onload="">
+	<div class="header">
+		<div class="header-button animated" id="header-button" onclick="showOverflow()">
+			<img src="images/header-button2.png" class="header-button">
+		</div>
+	</div>
+	<div class="content">
+		<div class="overflow-menu animated" id="overflow-menu">
+			<div class="menu-text">
+				<p class="menu-textarea animated fadeIn optionTextArea" id="menu-textarea">Курсовая #1</p>
+			</div>
+			<div class="menu-change">
+				<div class="menu-change-btn" onmouseover="hoverButton(1, true)" onmouseout="hoverButton(1, false)" onclick="userChoice(1)">
+					<p class="menu-change-btn-text">Запуск программы</p>
+				</div>
+				<!-- <div class="menu-change-btn" onmouseover="hoverButton(2, true)" onmouseout="hoverButton(2, false)" onclick="userChoice(2)">
+					<img id="ex1-2" src="images/b2.png">
+				</div> -->
+			</div>
+			<div class="overflow-footer">
+				<p class="overflow-info">Выполнил: Махмудов Евгений, группа 3363</p>
+			</div>
+		</div>
+		<div class="menu">
+			<div class="menu-addValue">
+				<form id="ex1form" method="post">
+					<div class="topFormDiv">
+						<div class="divInp">
+							<input type="text" class="inputForm" name="" id="X">
+							<p class="textX">X:</p>
+						</div>
+						<div class="divInp">
+							<input type="text" class="inputForm" name="" id="Y">
+							<p class="textY">Y:</p>
+						</div>
+					</div>
+					<div class="bottomFormDiv">
+						<div class="divInp">
+							<input type="text" class="inputForm" name="" id="Value">
+							<p class="textValue">Value:</p>
+						</div>
+						<div class="divInp"><input type="button" class="inputBtn" value="Добавить" id="add" onclick="addValue(1)"></div>
+					</div>
+				</form>
+			</div>
+			<div class="menu-showValues" id="showValues">
+				
+			</div>
+		</div>
+		<div class="display" id="display">
+			
+		</div>
+	</div>
+</body>
+</html>
